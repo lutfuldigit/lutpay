@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', arial;
+}
+
+:root {
+    --primary-color: #052033;
+    --secondary-color: #1BC6F5;
+    --box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.226);
+    --fade-white-color: #F8FBFD;
+}
+
+body {
+    background-color: whitesmoke;
+    color: var(--primary-color);
+    overflow-x: hidden;
+}
+
+
+/* -------------navigation area */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    height: 10vh;
+    align-items: center;
+    background-color: white;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: unset;
+}
+
+nav .fa-bars {
+    display: none;
+}
+
+.navigation ul {
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.navigation li:hover {
+    color: var(--secondary-color);
+}
+
+.sign-btn-con button {
+    color: var(--primary-color);
+    padding: 10px 15px;
+    border: 4px groove var(--primary-color);
+    border-radius: 8px;
+    background-color: white;
+    outline: 0.1px solid white;
+    margin-right: 10px;
+    font-weight: 600;
+    font-family: 'Roboto', arial;
+    font-size: 1.1rem;
+}
+
+/* .sign-btn-con:nth-child(2){
+    margin-left: 10px;
+} */
+
+
+
+/* ------------hero section */
+
+.hero-section-cont h1 {
+    font-size: 3rem;
+}
+
+.hero-section-cont h2 {
+    font-size: 2rem;
+}
+
+.hero-section-cont {
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    padding: 20px 10%;
+    flex-wrap: wrap;
+
+}
+
+.hero-section {
+    overflow: hidden;
+    color: white;
+    flex-grow: 1;
+    width: 50%;
+}
+
+.hero-ani-text {
+    font-size: 1.5rem;
+}
+
+.hero-ani-text::after {
+    content: '';
+    padding: 3px 8px;
+    background-color: var(--secondary-color);
+    animation: hero-ani-text 5s alternate-reverse ease-in-out infinite;
+
+}
+
+@keyframes hero-ani-text {
+    0% {
+        content: 'Airtime';
+    }
+
+    25% {
+        content: 'Data';
+    }
+
+    50% {
+        content: 'Cable Subscription';
+    }
+
+    75% {
+        content: 'Electricity Payment';
+    }
+
+    100% {
+        content: 'Api-Documentations';
+    }
+}
+
+
+.download-images-btn img {
+    width: 150px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.download-images-btn a:nth-child(2) {
+    margin-left: 10px;
+}
+
+
+/* ----------hero image */
+
+.hero-img {
+    width: 100%;
+    align-self: center;
+
+}
+
+.hero-image-cont {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 50%;
+}
+
+.fast-positionining {
+    position: relative;
+}
+
+.fast1 {
+    position: absolute;
+    left: 0px;
+    animation: fasting-ani1 5s ease-out infinite;
+    width: 120px
+}
+
+@keyframes fasting-ani1 {
+    from {
+        transform: scale(0.4);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.fast2 {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    animation: fasting-ani 5s ease-out infinite;
+    width: 140px
+}
+
+
+@keyframes fasting-ani {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translate(40%);
+    }
+}
+
+
+
+/* ------------navi gation section media query for mobile */
+
+@media (max-width:770px) {
+    header {
+        justify-self: center;
+    }
+
+    .hero-section,
+    .hero-img {
+        width: 100%;
+    }
+
+    .navigation ul,
+    .nav-btn {
+        display: none;
+    }
+
+    .hero-section .nav-btn {
+        display: block;
+    }
+
+    .navigation .fa-bars{
+        display: block;
+    }
+
+
+
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1rem;
+    }
+
+
+    .hero-img {
+        width: 300px;
+        align-self: center;
+    }
+
+    .fast1,
+    .fast2 {
+        width: 100px;
+    }
+
+    .download-images-btn {
+        margin-top: -20px;
+        margin-bottom: 30px;
+
+    }
+
+    .download-images-btn img {
+        width: 120px;
+    }
+
+    .hero-ani-text {
+        font-size: 1rem;
+    }
+}
+
+
+/* --------------main container  */
+
+#center-text{
+    text-align: center;
+}
+.main-cont-div-padding {
+    padding: 0 10%;
+    margin-top: 40px;
+}
+
+.main-cont h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.services-card {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.bg {
+    background-color: whitesmoke;
+    padding: 10px 10%;
+}
+
+.services-card div {
+    width: 220px;
+    padding: 10px 20px;
+    text-align: center;
+    align-content: center;
+    background-color: white;
+}
+
+.more {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+/*.................. satified card area  */
+
+.satisfied-card-cont {
+    margin-top: 80px;
+}
+
+.sati-text {
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0 0 30px 0;
+}
+
+
+.satisfied-card-cont1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.satisfied-card {
+    width: 250px;
+    box-shadow: var(--box-shadow);
+    padding: 20px 15px;
+    position: relative;
+
+}
+
+.rating-img{
+   width: 60px;
+   margin-left: 40%;
+}
+
+
+.satisfied-card div>img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.satisfied-card-display {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.fa-quote-right {
+    position: absolute;
+    top: -16px;
+    right: 10px;
+    font-size: 2.1rem;
+}
+
+
+
+/* .................main body media query */
+
+@media (max-width:650px) {
+
+    .hero-section-cont{
+        padding: 20px 5%;
+    }
+    .satisfied-card {
+        width: 160px;
+    }
+
+    .satisfied-card-display h3 {
+        font-size: 0.9rem;
+    }
+
+    .satisfied-card p {
+        font-size: 0.8rem;
+    }
+
+    nav .fa-bars {
+        display: block;
+        font-size: 1.3rem;
+    }
+
+    .services-card div {
+        width: 150px;
+        font-size: 0.8rem;
+        height: auto;
+        padding: 15px 10px;
+    }
+    .main-cont-div-padding{
+        padding: 0 5%;
+    }
+
+}
+
+/* ........... prices section */
+
+#view {
+    appearance: none;
+}
+
+.about-us {
+    align-content: center;
+}
+
+.about-us p {
+    line-height: 1.5;
+}
+
+.about-us label {
+    color: white;
+    background-color: var(--primary-color);
+    padding: 8px 9px;
+    border-radius: 5px;
+    display: block;
+    width: fit-content;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.hide-price {
+    display: none;
+}
+
+#view:checked~.hide-price {
+    display: block;
+}
+
+#view:checked~.view-more {
+    display: none;
+}
+
+.team-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about-flex div {
+    width: 500px;
+}
+
+
+
+
+
+.total-user-sec {
+    margin-top: 80px;
+    background-color: var(--primary-color);
+    padding-bottom: 25px;
+    align-content: center;
+}
+
+.total-user-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px 20px;
+}
+
+.total-user-cont-inner {
+    width: 200px;
+    color: white;
+    align-content: center;
+    text-align: center;
+    border-left: 2px dotted white;
+    padding: 5px 10px;
+    font-size: 0.7rem;
+
+}
+
+.fancy-text {
+    font-size: 2rem;
+}
+
+
+
+/* ...........why choose us section */
+
+#why-us h2{
+    text-align: center;
+}
+
+.why-box {
+    display: flex;
+    gap: 5%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.why-box .fa-solid {
+    color: var(--secondary-color);
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.why-choose-us-cont {
+    width: 140px;
+    height: 140px;
+    border-radius: 5px;
+    background-color: white;
+    /* box-shadow: var(--box-shadow); */
+    align-content: center;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.2rem;
+}
+
+
+#contact-us {
+    color: white;
+}
+
+.contact-us-cont {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-us-cont p {
+    font-size: 0.8rem;
+}
+
+.contact-us-cont h3 {
+    font-size: 0.9rem;
+}
+
+.contact-icon-box {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    place-content: center;
+    text-align: center;
+}
+
+.whatsapp-cont {
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    padding: 5px;
+    position: fixed;
+    bottom: 10%;
+    right: 2px;
+    z-index: 1;
+    animation: what-button 5s infinite;
+
+
+}
+
+.whatsapp-cont .fa-whatsapp {
+    color: green;
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.whatsapp-cont p {
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+}
+
+@keyframes what-button {
+    100% {
+        transform: scale(100%);
+    }
+
+    40% {
+        transform: scale(80%);
+    }
+
+    70% {
+        transform: scale(100%);
+    }
+
+    90% {
+        transform: scale(40%);
+    }
+}
+
+/* .......footer area */
+
+.b-top {
+    position: absolute;
+    top: -25px;
+    right: 10%;
+    padding: 8px;
+    font-size: 0.9rem;
+    background-color: var(--primary-color);
+}
+
+.footer-cont {
+    width: 100%;
+    background-color: black;
+    padding: 50px 10%;
+    color: white;
+    position: relative;
+}
+
+.footer-cont a {
+    text-decoration: none;
+    color: white;
+}
+
+#lutpay-footer-logo {
+    width: 60px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.footer-flex-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 19px;
+}
+
+#footer-btn {
+    margin-top: 5px;
+}
+
+.developer {
+    display: flex;
+    margin-top: 40px;
+    font-size: 0.8rem;
+    justify-content: space-between;
+}
+
+
+/* .................another responsiveness from tablet down-ward */
+
+@media (max-width:750px) {
+    .total-user-cont-inner {
+        width: 140px;
+    }
+
+    .footer-cont {
+        font-size: 0.9rem;
+    }
+}
+
+/* .........small device */
+@media (max-width:320px) {
+    html {
+        font-size: 0.9rem;
+    }
+
+    .services-card div{
+        width: 100%;
+    }
+}
