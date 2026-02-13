@@ -1,0 +1,1 @@
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QLutpay | Fast VTU & Bill Payment Platform\\E$"}
