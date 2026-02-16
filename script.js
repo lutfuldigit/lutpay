@@ -1,10 +1,10 @@
-// let toggle = document.querySelector(".toggle");
-// const sideBar= document.querySelector('.side-bar');
+let toggle = document.querySelector(".toggle");
+const sideBar= document.querySelector('.side-bar');
 
 
-// toggle.addEventListener("click", function(){
-//     sideBar.classList.toggle('active')
-// });
+toggle.addEventListener("click", function(){
+    sideBar.classList.toggle('active')
+});
 
 //  intersecting section......
 const sections = document.querySelectorAll('.sec-inter')
